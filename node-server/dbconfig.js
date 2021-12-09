@@ -1,8 +1,8 @@
 const config = {
-    user: 'Chernandez_SQL',
-    password: '199795554Kris',
+    user: 'Dmiranda_SQL',
+    password: 'A4aaaaaaaa',
     server: '192.168.50.190',
-    database: 'Chernandez_SBD'
+    database: 'Dmiranda_SBD'
 }
 
 module.exports = config;

@@ -4,6 +4,7 @@ var config = require ('./dbconfig');
 const sql = require('mssql');
 var EMPLEADOS = require ('./EMPLEADOS');
 
+/*Tabla 1*/
 async function getEMPLEADOS(){
     try{
         let pool = await sql.connect(config);
@@ -13,6 +14,7 @@ async function getEMPLEADOS(){
         console.log(error);
     }
 }
+/*Tabla 2*/
 async function getLoteMateriaPrima(){
     try{
         let pool = await sql.connect(config);
@@ -22,7 +24,29 @@ async function getLoteMateriaPrima(){
         console.log(error);
     }
 }
+/*Tabla 3*/
+async function getCLIENTES(){
+    try{
+        let pool = await sql.connect(config);
+        let CLIENTES = await pool.request().query("select * from CLIENTES");
+        return CLIENTES.recordsets;
+    }catch(error){
+        console.log(error);
+    }
+}
+/*Tabla 4*/
+async function getTRANSPORTISTAS(){
+    try{
+        let pool = await sql.connect(config);
+        let TRANSPORTISTAS = await pool.request().query("select * from TRANSPORTISTAS");
+        return TRANSPORTISTAS.recordsets;
+    }catch(error){
+        console.log(error);
+    }
+}
 module.exports={
     getEMPLEADOS : getEMPLEADOS,
-    getLoteMateriaPrima : getLoteMateriaPrima     
+    getLoteMateriaPrima : getLoteMateriaPrima,
+    getCLIENTES : getCLIENTES,
+    getTRANSPORTISTAS : getTRANSPORTISTAS     
 }
