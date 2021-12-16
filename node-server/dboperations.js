@@ -44,9 +44,46 @@ async function getTRANSPORTISTAS(){
         console.log(error);
     }
 }
+/*
+ Procedimiento : agregar EMPLEADOS
+async function addEMPLEADOS(EMPLEADOS){
+    try{
+        let pool = await sql.connect(config);
+        let insertarEMPLEADOS = await pool.request()
+            .input('nombre', sql.VARCHAR, EMPLEADOS.EMP_nombre)
+            .input('area', sql.VARCHAR, EMPLEADOS.EMP_area)
+            .output('Agregado',sql.Int,1)
+            .execute('agregarEMPLEADOS');
+        return insertarEMPLEADOS.recordsets;
+    }
+    catch (err){
+        console.log(err);
+    }
+}
+ Procedimiento : agregar EMPLEADOS
+async function addCLIENTES(CLIENTES){
+    try{
+        let pool = await sql.connect(config);
+        let insertarCLIENTES = await pool.request()
+            .input('nombre', sql.VarChar, CLIENTES.CL_nombre)
+            .input('sexo', sql.VarChar, CLIENTES.CL_sexo)
+            .input('ciudad',sql.VarChar,CLIENTES.CL_ciudad)
+            .output('Agregado',sql.Int,1)
+            .execute('agregarCLIENTES');
+        return insertarCLIENTES.recordsets;
+    }
+    catch (err){
+        console.log(err);
+    }
+}
+*/
 module.exports={
     getEMPLEADOS : getEMPLEADOS,
     getLoteMateriaPrima : getLoteMateriaPrima,
     getCLIENTES : getCLIENTES,
-    getTRANSPORTISTAS : getTRANSPORTISTAS     
+    getTRANSPORTISTAS : getTRANSPORTISTAS,   
+    
+   /* addCLIENTES  : addCLIENTES,
+    addEMPLEADOS : addEMPLEADOS
+    */
 }

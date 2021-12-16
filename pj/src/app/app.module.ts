@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoteMateriaPrimaComponent } from './lote-materia-prima/lote-materia-prima.component';
 import { CLIENTESComponent } from './clientes/clientes.component';
 import { TRANSPORTISTASComponent } from './transportistas/transportistas.component';
+import { EquipoComponent } from './equipo/equipo.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { TRANSPORTISTASComponent } from './transportistas/transportistas.compone
     EMPLEADOSComponent,
     LoteMateriaPrimaComponent,
     CLIENTESComponent,
-    TRANSPORTISTASComponent
+    TRANSPORTISTASComponent,
+    EquipoComponent,
+    UsuariosComponent
   ],
   imports: [
     APP_ROUTING,

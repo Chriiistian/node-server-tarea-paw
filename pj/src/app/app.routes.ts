@@ -7,7 +7,8 @@ import { BasictableComponent } from './basictable/basictable.component';
 import { BlankComponent } from './blank/blank.component';
 import { FontawesomeComponent } from './fontawesome/fontawesome.component';
 import { MapgoogleComponent } from './mapgoogle/mapgoogle.component';
-
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { EquipoComponent } from './equipo/equipo.component';
 
 const APP_ROUTES: Routes = [
   { path: 'dashboard', component: DashboardComponent},
@@ -17,6 +18,8 @@ const APP_ROUTES: Routes = [
   { path: 'blank', component: BlankComponent},
   { path: 'fontawesome', component: FontawesomeComponent},
   { path: 'mapgoogle', component: MapgoogleComponent},
+  { path: 'usuarios', component: UsuariosComponent},
+  { path: 'equipo', component: EquipoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'dashboard' },
   //{ path: '**', component: DashboardComponent}
   //{ path: 'path/:routeParam', component: MyComponent },

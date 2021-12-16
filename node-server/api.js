@@ -44,7 +44,21 @@ async function obtenerTRANSPORTISTAS(request,response){
     response.send(resultado);    
  }
 app.get('/TRANSPORTISTAS', obtenerTRANSPORTISTAS)
+/* Intento de agregar
+async function agregarCLIENTES(request,response){
+    let CLIENTES = {...request.body}
+    var resultado = await operation.operation.addCLIENTES(CLIENTES);
+    response.send(resultado);
+}
+app.post('/agregarCLIENTES', agregarCLIENTES)
 
+async function agregarEMPLEADOS(request,response){
+    let EMPLEADOS = {...request.body}
+    var resultado = await operation.operation.addEMPLEADOS(EMPLEADOS);
+    response.send(resultado);
+}
+app.post('/agregarEMPLEADOS', agregarEMPLEADOS)
+*/
 var port = process.env.PORT || 8091;
 app.listen(port);
 console.log(' La API esta corriendo en el puerto: '+port);
